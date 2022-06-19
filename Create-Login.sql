@@ -1,0 +1,7 @@
+CREATE LOGIN [us-xmcloud\StaplesProd1] FROM WINDOWS WITH DEFAULT_DATABASE = [master], DEFAULT_LANGUAGE = [us_english];
+GO
+EXEC sp_addsrvrolemember 'us-xmcloud\StaplesProd1', 'processadmin';
+EXEC sp_addsrvrolemember 'us-xmcloud\StaplesProd1', 'setupadmin';   
+GO
+GRANT ALTER ANY CONNECTION, ALTER ANY LINKED SERVER, ALTER ANY LOGIN, ALTER ANY SERVER ROLE, ALTER SERVER STATE, ALTER TRACE, CONNECT SQL, CREATE ANY DATABASE, VIEW ANY DATABASE, VIEW ANY DEFINITION, VIEW SERVER STATE TO [us-xmcloud\StaplesProd1] WITH GRANT OPTION;
+GO
